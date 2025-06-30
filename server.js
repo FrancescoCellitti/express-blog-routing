@@ -19,4 +19,4 @@ app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}`);
 
 })
-app.use('/api/posts', postsRouter)
+app.use('/posts', postsRouter)

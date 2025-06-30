@@ -48,15 +48,19 @@ router.post('/', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-    res.send('modifica di tutti i post')
+    res.send('modifica del post ' + req.params.id)
 })
 
 router.patch('/:id', (req, res) => {
-    res.send('modifica singola del post '+ req.params.id)
+    res.send('modifica singola del post ' + req.params.id)
 })
 
-router.delete('/:id', (req, res) => { 
-    res.send('cancellazione del post')
+router.delete('/:id', (req, res) => {
+    res.send('cancellazione del post ' + req.params.id)
+})
+
+router.get('/:id', (req, res) => {
+    res.json(posts[parseInt(req.params.id)])
 })
 
 module.exports = router
